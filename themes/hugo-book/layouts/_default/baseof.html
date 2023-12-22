@@ -1,5 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+
+<script>
+  firstPage='/docs/須知';
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname != '/' && !checkIsLogin()) {
+         window.location.href = "/";
+    }
+    if(window.location.pathname == '/' && checkIsLogin()) {
+      window.location.href = firstPage;
+    }
+  });
+
+  function checkIsLogin() {
+    return localStorage.getItem('isLogin') === btoa("{{ .Site.Params.password }}");
+  }
+
+  function checkPassword() {
+    let inputPassword = document.getElementById('passwordInput').value;
+    if (btoa(inputPassword) === btoa("{{ .Site.Params.password }}")) {
+      localStorage.setItem('isLogin', btoa(inputPassword));
+    } else {
+      alert('Access denied. Please try again.');
+    }
+  }
+</script>
+
 <head>
   {{ partial "docs/html-head" . }}
   {{ partial "docs/inject/head" . }}

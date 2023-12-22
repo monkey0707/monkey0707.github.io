@@ -1,0 +1,54 @@
+<script>
+  document.body.innerHTML = `
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+            }
+            #passwordInput, #submitBtn {
+                padding: 10px;
+                font-size: 16px;
+                border: solid 1px #ccc;
+                border-radius: 5px;
+            }
+            #passwordInput, #submitBtn {
+                padding: 10px;
+                font-size: 16px;
+                border: solid 1px #ccc;
+                border-radius: 5px;
+                width: 100%;  // Make the input and button the same width
+                margin: 10px 0;  // Add some vertical margin
+            }
+            #submitBtn {
+                padding: 10px 20px;
+                border: none;
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+            #submitBtn:hover {
+                background-color: #45a049;
+            }
+            #loginForm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                background-color: #fff;
+            }
+
+        </style>
+        <div>
+            <form id="loginForm">
+                <input type="password" id="passwordInput" placeholder="請輸入密碼">
+                <button id="submitBtn" onclick="checkPassword()">送出</button>
+            </form>
+        </div>
+    `;
+ 
+</script>

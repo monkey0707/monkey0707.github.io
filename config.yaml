@@ -7,3 +7,9 @@ languages:
     contentDir: 'content'
     weight: 3
 theme: 'hugo-book'
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  password: 'acim'
