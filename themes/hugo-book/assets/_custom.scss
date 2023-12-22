@@ -1,0 +1,23 @@
+html{
+    font-size: 18px;
+}
+
+body{
+    font-family: '思源宋體';
+}
+
+.markdown h1{
+    //置中
+    text-align: center;
+    //字體大小
+    font-size: 1.25em;
+    //字體粗細
+    font-weight: 1000;
+}
+
+.markdown blockquote {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
+    border-inline-start: none;
+    border-radius: 0.25rem;
+}

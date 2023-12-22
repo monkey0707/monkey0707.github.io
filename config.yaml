@@ -1,0 +1,9 @@
+baseURL: 'http://example.org/'
+defaultContentLanguage: 'zh-TW'
+title: '奇蹟課程新譯'
+languages:
+  zh-TW:
+    languageName: 'Chinese'
+    contentDir: 'content'
+    weight: 3
+theme: 'hugo-book'
