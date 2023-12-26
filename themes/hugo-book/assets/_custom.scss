@@ -1,32 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
-html{
-    font-size: 18px;
+
+html {
+  font-size: 18px;
 }
 
-body{
-    font-family: 'Noto Serif TC';
+body {
+  font-family: 'Noto Serif TC';
 }
 
-.markdown h1{
-    //置中
-    text-align: center;
-    //字體大小
-    font-size: 1.25em;
-    //字體粗細
-    font-weight: 1000;
+.markdown h1 {
+  //置中
+  text-align: center;
+  //字體大小
+  font-size: 1.25em;
+  //字體粗細
+  font-weight: 1000;
 }
 
 .markdown blockquote {
-    margin: 1rem 0;
-    padding: 0.5rem 1rem 0.5rem 0.75rem;
-    border-inline-start: none;
-    border-radius: 0.25rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  border-inline-start: none;
+  border-radius: 0.25rem;
 }
 
 .sentence-number {
-    color: rgba(0,0,0,.7);
-    display: inline;
-    font-size: 60%;
-    line-height: 1.5em;
-    vertical-align: text-top;
+  color: rgba(0, 0, 0, 0.7);
+  display: inline;
+  font-size: 60%;
+  line-height: 1.5em;
+  vertical-align: text-top;
+}
+
+.markdown p {
+  text-align: justify;
+  line-height: 1.6em;
+  letter-spacing: 0.05em;
+}
+
+.book-page {
+  padding: 3rem;
+  position: relative;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .book-page {
+    padding: 1rem;
+  }
+
+  .post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+}
+
+.prev-post,
+.next-post {
+  background-color: #f8f9fa;
+  padding: 1em 2em;
+  text-decoration: none;
+  color: #333;
+  border-radius: 10px;
+}
+
+.prev-post:hover,
+.next-post:hover {
+  background-color: #e9ecef;
+}
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.prev-post,
+.next-post {
+  background-color: #f8f9fa;
+  padding: 1em 2em;
+  text-decoration: none;
+  color: #333;
+}
+
+.prev-post:hover,
+.next-post:hover {
+  background-color: #e9ecef;
 }
